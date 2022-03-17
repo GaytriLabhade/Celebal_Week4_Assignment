@@ -3,7 +3,6 @@
 [1] Write a query that prints a list of employee names (i.e.: the name attribute) for employees in Employee having a salary greater than $2000 per month who have been employees for less than 10 months. Sort your result by ascending employee_id.
 
 Ans:
-
 SELECT NAME FROM EMPLOYEE
 WHERE SALARY>2000 AND MONTHS<10 ORDER BY EMPLOYEE_ID ASC;
 
@@ -11,14 +10,12 @@ WHERE SALARY>2000 AND MONTHS<10 ORDER BY EMPLOYEE_ID ASC;
 [2] Query the average population of all cities in CITY where District is California.
 
 Ans:
-
 SELECT avg(POPULATION) FROM CITY
 WHERE  DISTRICT = 'California' ;
  
 [3] Query the average population for all cities in CITY, rounded down to the nearest integer.
 
 Ans:
-
 SELECT ROUND(avg(POPULATION)) 
 FROM CITY;
 
@@ -35,7 +32,6 @@ SELECT MAX(POPULATION) - MIN(POPULATION) FROM CITY;
 
 [6] Samantha was tasked with calculating the average monthly salaries for all employees in the EMPLOYEES table, but did not realize her keyboard's  key was broken until after completing the calculation. She wants your help finding the difference between her miscalculation (using salaries with any zeros removed), and the actual average salary.
 Write a query calculating the amount of error (i.e.:  average monthly salaries), and round it up to the next integer.
-
 ANS:
 select ceil(avg(salary) - avg(replace(salary, '0', ''))) from employees;
 
